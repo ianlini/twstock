@@ -56,6 +56,7 @@ class TWSEFetcher(BaseFetcher):
             else:
                 break
         else:
+            # Fail in all retries
             data = {'stat': '', 'data': []}
 
         if data['stat'] == 'OK':
@@ -99,6 +100,7 @@ class TPEXFetcher(BaseFetcher):
             else:
                 break
         else:
+            # Fail in all retries
             data = {'aaData': []}
 
         data['data'] = []
